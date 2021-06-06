@@ -41,6 +41,16 @@ public class domaincontoller {
 		return newuser;
 	}
 	
+	@RequestMapping(value="putvalnew/{id}",method = RequestMethod.PUT)
+	public user putmethodnew(@RequestBody user _userBody) {
+		user newuser=new user();
+		String emailName=_userBody.getEmail();
+		newuser.setEmail(emailName);
+		newuser.setName(_userBody.getName());
+		return newuser;
+	}
+	
+	
 	
 
 }
